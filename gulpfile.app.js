@@ -13,7 +13,8 @@ gulpBase({
     ],
     includePaths: [
       './',
-      './node_modules/foundation-sites/scss'
+      './node_modules/foundation-sites/scss',
+      './node_modules/@mdi/font/scss'
     ],
     output: './public/css'
   }

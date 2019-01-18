@@ -1,21 +1,90 @@
-//
-// ONLY MENU PARTIAL
-//
+.panda__menu{
+  position: relative;
 
-@include breakpoint(small up) {
-    body {
+  &-logo{
+    width: 100%;
+  }
 
+  &-categories{
+    width: 100%;
+    margin-top: 50px;
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li{
+        width: 100%;
+        margin-bottom: 7px;
+
+        a{
+          display: inline-block;
+          font-size: 1.2rem;
+          transition: all .5s;
+
+          sup{
+            font-size: .8rem;
+            color: $textgray;
+          }
+        }
+
+        &:nth-child(1){
+          a{
+            color: $textgray;
+          }
+        }
+
+        &:nth-child(2){
+          a{
+            color: #0589B2;
+          }
+        }
+
+        &:nth-child(3){
+          a{
+            color: #C4008D;
+          }
+        }
+
+        &:nth-child(4){
+          a{
+            color: #E5A603;
+          }
+        }
+      }
     }
-}
+  }
 
-@include breakpoint(medium up) {
-    body {
+  &-admin{
+    width: 100%;
+    margin-top: 50px;
 
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+
+
+      li{
+        width: 100%;
+
+        a{
+          display: inline-block;
+          width: 100%;
+          font-size: .8rem;
+          color: $textgray;
+        }
+      }
     }
-}
+  }
 
-@include breakpoint(large up) {
-    body {
-
-    }
+  &-branding{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+  }
 }

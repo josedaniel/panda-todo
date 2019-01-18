@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import "materialdesignicons";
+
 // Foundation Core
 @import "./modules.scss";
 
@@ -7,5 +10,30 @@
 //
 // Import Containers Styles
 //
+@import "./colors";
 @import "./partials/_index";
-@import "./pages/_index";
+
+
+body{
+  background-color: $pandabg;
+  font-family: 'Open Sans', sans-serif;
+
+  #app{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  div.panda{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    padding: 40px 20px;
+    width: 100%;
+
+    @include breakpoint(550) {
+      grid-template-columns: 150px auto;
+    }
+  }
+
+}

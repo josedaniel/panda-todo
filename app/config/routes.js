@@ -6,6 +6,6 @@
 
 module.exports = {
 
-  '/': 'WelcomeController.get'
+  '/': 'PandaController.get'
 
 };

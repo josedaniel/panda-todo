@@ -1,0 +1,155 @@
+.panda__content{
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 7px 0px #77777752;
+
+  &-form{
+    width: 100%;
+
+    h2{
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+
+    form{
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 40px;
+
+      input{
+        border: none;
+        border-bottom: 1px solid #eee;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        padding-bottom: 5px;
+        outline: none;
+        color: #555;
+      }
+
+      a{
+        display: grid;
+        justify-self: end;
+        align-items: center;
+        justify-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $actiongreen;
+        color: white;
+        transition: all .2s;
+        font-size: 1.2rem;
+
+        &:hover{
+          background-color: lighten($actiongreen, 15%);
+        }
+      }
+    }
+  }
+
+  &-todos{
+    width: 100%;
+    margin-top: 40px;
+
+
+    h2{
+      font-size: 1.5rem;
+      font-weight: 100;
+      color: #0589B2;
+      margin-bottom: 30px;
+    }
+  }
+
+  &-todo-list{
+    width: 100%;
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li{
+        width: 100%;
+        margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: 40px auto 100px;
+        align-items: center;
+
+        &.complete{
+          .complete-action{
+            i{
+              opacity: 1;
+            }
+          }
+
+          .todo-item-copy{
+            text-decoration: line-through;
+          }
+        }
+
+        .complete-action{
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: #eee;
+          justify-self: start;
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          font-size: 1rem;
+
+          i{
+            opacity: 0;
+          }
+        }
+
+        .todo-item-copy{
+          font-size: 1.1rem;
+          color: #555;
+
+          a{
+            display: inline-block;
+            margin-left: 10px;
+            background-color: $editgreen;
+            font-weight: 700;
+            font-size: .8rem;
+            line-height: .8rem;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 2px;
+            opacity: 0;
+          }
+        }
+
+        .action-remove{
+          font-size: .8rem;
+          color: #BD0505;
+          font-weight: 100;
+          justify-self: end;
+          opacity: 0;
+        }
+
+        &:hover{
+          .todo-item-copy{
+            a{
+              opacity: 1;
+              transition: all .2s;
+            }
+          }
+
+          .action-remove{
+            opacity: 1;
+            transition: all .2s;
+          }
+        }
+      }
+    }
+  }
+
+  &-empty{
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 40px 0;
+    display: none;
+  }
+}
